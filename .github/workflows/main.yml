@@ -24,8 +24,8 @@ jobs:
 #      - name: Build with Gradle
 #        run: .\gradlew test
 #
-#      - name: Install Railway CLI
-#        run: npm i -g @railway/cli
+      - name: Install Railway CLI
+        run: npm i -g @railway/cli
 #
 #      - name: Authenticate in Railway
 #        env:
