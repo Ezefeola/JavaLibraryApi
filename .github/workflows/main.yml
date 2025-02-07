@@ -30,6 +30,7 @@ jobs:
     - name: Authenticate in Railway
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      run: echo "RAILWAY_TOKEN is set"
   
     - name: Deploy on Railway
       run: |
