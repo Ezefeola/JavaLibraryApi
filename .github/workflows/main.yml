@@ -24,7 +24,7 @@ jobs:
     - name: Build with Gradle
       run: .\gradlew test
 
-    - name: Deploy on Render
+    - name: Deploy on Railway
       run: |
         railway login --token ${{ secrets.RAILWAY_API_KEY }}
         railway up --project ${{ secrets.RAILWAY_PROJECT_ID }}
