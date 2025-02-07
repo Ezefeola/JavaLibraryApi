@@ -30,7 +30,6 @@ jobs:
     - name: Authenticate in RailWay
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-      run: railway login --browserless
       
     - name: Deploy on Railway
       run: |
