@@ -25,7 +25,5 @@ jobs:
 
     - name: Deploy on Render
       run: |
-        curl -X POST "https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys" \
-        -H "Accept: application/json" \
-        -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
-        -d ""
+        railway login --token ${{ secrets.RAILWAY_API_KEY }}
+        railway up --project ${{ secrets.RAILWAY_PROJECT_ID }}
