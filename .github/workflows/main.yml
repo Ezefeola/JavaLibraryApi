@@ -32,9 +32,12 @@ jobs:
 #          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 #        run: railway login
 
-      - name: Deploy on Railway
-        run: railway up
-        env:
+#      - name: Deploy on Railway
+#        run: railway up
+#        env:
 #          RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_KEY }}
 #          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_PROJECT_ID }}
+      - name: Deploy on Railway
+        run: railway up --service=${{ secrets.RAILWAY_SERVICE_ID }}
+        env:
+            RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
